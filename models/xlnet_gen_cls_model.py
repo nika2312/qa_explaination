@@ -244,7 +244,7 @@ class GeneralGenerationForClassfiication(Model):
         cand_emb = self.dropout(cls_embeddings(candidates["tokens"].view(bsz*cls_num, -1).contiguous()))
 
         # LM-based classification
-        if self.use_cls:# and (not self.training or epoch_num[0] > self.add_cls_after_epoch_num):
+        if self.use_cls:
 
             cls_emb = self.cls_embeddings_weight[
                 self.tokenizer.encode(self.tokenizer.cls_token, add_special_tokens=False)].expand(bsz*cls_num, 1, -1)
