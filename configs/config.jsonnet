@@ -15,13 +15,13 @@
         "do_lowercase": true,
         "need_separator": true,
         "use_xlnet": true,
-        "use_bos_as_padding": true, // This is needed to use <|endoftext|> token instead of a new <pad> token
+        "use_bos_as_padding": true,
         "padding_on_right": false
       }
     }
   },
-  "train_data_path":  "/home_dir/allen/commonsense/train_rand_split.jsonl",
-  "validation_data_path": "/home_dir/allen//commonsense/dev_rand_split.jsonl",
+  "train_data_path":  "/TRAINING_PATH/train_rand_split.jsonl",
+  "validation_data_path": "/DEV_PATH/commonsense/dev_rand_split.jsonl",
   "model": {
     "type": "general_gen_cls",
     "model_name": "xlnet-large-cased",
@@ -45,7 +45,7 @@
 //        "initializer": [[".*(gen|cls).*",
 //                      {
 //                        "type": "pretrained",
-//                        "weights_file_path": "/specific/netapp5/joberant/home/veronical/allen/commonsense/final_logs/xlnet_large_sim_top5_for_real_gs_no_kld_no_rep_cls_after_3/best.th",
+//                        "weights_file_path": "/MODEL/best.th",
 //                        "cuda_device": 0
 //                      }],]
 
